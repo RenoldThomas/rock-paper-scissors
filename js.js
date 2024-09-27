@@ -16,14 +16,12 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let answer = prompt("Type in one: rock, paper, or scissors");
-    return answer.toLowerCase();
+    return answer.trim().toLowerCase();
 }
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
         console.log("You tied!");
-        humanScore += 1;
-        computerScore += 1;
     } else if (humanChoice === "rock" && computerChoice === "paper") {
         console.log("You Lose! Paper beats Rock.");
         computerScore += 1;
@@ -43,12 +41,32 @@ function playRound(humanChoice, computerChoice) {
         console.log("You lose! Rock beats Scissors.");
         computerScore += 1;
     } else {
-        alert("Did not give right input");
+        alert("Did not give valid input");
     }
 
 }
 
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
+function playGame() {
+    humanScore = 0;
+    computerScore = 0;
 
-playRound(humanChoice, computerChoice);
+    for (let i = 0; i < 5; i++) {
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+
+        playRound(humanChoice, computerChoice);
+    }
+
+    if (humanScore > computerScore) {
+        console.log(`You Won! You beat the computer ${humanScore} - ${computerScore}!`);
+    }
+    else if (humanScore === computerScore) {
+        console.log(`You tied! The score was ${humanScore} - ${computerScore}.`);
+    }
+    else {
+        console.log(`You lost ${humanScore} - ${computerScore}. Try again next time.`);
+    }
+
+}
+
+playGame();
