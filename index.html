@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rock Paper Scissors</title>
   <style>
+    /* Main styling with gradient background */
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -13,16 +14,22 @@
       margin: 0;
       padding: 2rem;
     }
+    
+    /* Game title styling */
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
+    
+    /* Container for the game choice buttons */
     #buttons {
       display: flex;
       justify-content: center;
       gap: 1rem;
       margin-bottom: 2rem;
     }
+    
+    /* Button styling with hover effects */
     button {
       padding: 1rem 2rem;
       font-size: 1.2rem;
@@ -33,14 +40,20 @@
       color: #333;
       transition: all 0.3s ease;
     }
+    
+    /* Button hover state */
     button:hover {
       background-color: #00b4db;
       color: white;
     }
+    
+    /* Game information displays */
     #score, #result, #final {
       font-size: 1.3rem;
       margin-top: 1rem;
     }
+    
+    /* Final result announcement styling */
     #final {
       font-size: 1.5rem;
       font-weight: bold;
@@ -49,16 +62,26 @@
   </style>
 </head>
 <body>
+  <!-- Game title -->
   <h1>Rock Paper Scissors</h1>
+  
+  <!-- Game choice buttons -->
   <div id="buttons">
     <button id="rock">Rock</button>
     <button id="paper">Paper</button>
     <button id="scissors">Scissors</button>
   </div>
+  
+  <!-- Display area for round results -->
   <div id="result"></div>
+  
+  <!-- Display area for current score -->
   <div id="score">You: 0 — Computer: 0</div>
+  
+  <!-- Display area for game winner announcement -->
   <div id="final"></div>
 
+  <!-- Link to JavaScript file -->
   <script src="js.js"></script>
 </body>
 </html>
