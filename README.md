@@ -36,3 +36,9 @@ A simple, browser-based implementation of the classic Rock Paper Scissors game w
 - Implement a game history feature
 - Add sound effects
 - Create difficulty levels for the computer player
+
+## Author
+Renold T (@renold)
+
+## Credits
+This project was created as part of The Odin Project curriculum (2021).
